@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jmeterTestPlan version="1.2" properties="5.0" jmeter="5.5">
+  <hashTree>
+    <TestPlan guiclass="TestPlanGui" testclass="TestPlan" testname="READ-Heavy Param" enabled="true">
+      <boolProp name="TestPlan.functional_mode">false</boolProp>
+      <boolProp name="TestPlan.serialize_threadgroups">false</boolProp>
+      <elementProp name="TestPlan.user_defined_variables" elementType="Arguments">
+        <collectionProp name="Arguments.arguments"/>
+      </elementProp>
+    </TestPlan>
+    <hashTree>
+      <!-- HTTP Defaults: baseUrl from -JbaseUrl -->
+      <ConfigTestElement guiclass="HttpDefaultsGui" testclass="ConfigTestElement" testname="HTTP Request Defaults" enabled="true">
+        <elementProp name="HTTPsampler.Arguments" elementType="Arguments"><collectionProp name="Arguments.arguments"/></elementProp>
+        <stringProp name="HTTPSampler.domain">${__javaScript(new java.net.URL('${__P(baseUrl,http://service-c:8082)}').getHost(),)}</stringProp>
+        <stringProp name="HTTPSampler.port">${__javaScript(var p=new java.net.URL('${__P(baseUrl,http://service-c:8082)}').getPort(); p==-1? ( '${__javaScript(new java.net.URL("${__P(baseUrl,http://service-c:8082)}").getProtocol(),)}'=='https'?443:80 ) : p ,)}</stringProp>
+        <stringProp name="HTTPSampler.protocol">${__javaScript(new java.net.URL('${__P(baseUrl,http://service-c:8082)}').getProtocol(),)}</stringProp>
+        <stringProp name="HTTPSampler.path"></stringProp>
+        <stringProp name="HTTPSampler.concurrentPool">6</stringProp>
+      </ConfigTestElement>
+      <hashTree/>
+
+      <!-- CSV: categories (1 col: catId) -->
+      <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="CSV categories_ids" enabled="true">
+        <stringProp name="filename">${__P(categoriesCsv,/jmeter-data/categories_ids.csv)}</stringProp>
+        <stringProp name="fileEncoding"></stringProp>
+        <stringProp name="variableNames">catId</stringProp>
+        <boolProp name="ignoreFirstLine">false</boolProp>
+        <stringProp name="delimiter">,</stringProp>
+        <boolProp name="quotedData">false</boolProp>
+        <boolProp name="recycle">true</boolProp>
+        <boolProp name="stopThread">false</boolProp>
+        <boolProp name="allowQuotedData">false</boolProp>
+        <stringProp name="shareMode">shareMode.all</stringProp>
+      </CSVDataSet>
+      <hashTree/>
+
+      <!-- CSV: items (2 cols: itemId, categoryId) -->
+      <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="CSV items_ids" enabled="true">
+        <stringProp name="filename">${__P(itemsCsv,/jmeter-data/items_ids.csv)}</stringProp>
+        <stringProp name="fileEncoding"></stringProp>
+        <stringProp name="variableNames">itemId,categoryId</stringProp>
+        <boolProp name="ignoreFirstLine">false</boolProp>
+        <stringProp name="delimiter">,</stringProp>
+        <boolProp name="quotedData">false</boolProp>
+        <boolProp name="recycle">true</boolProp>
+        <boolProp name="stopThread">false</boolProp>
+        <boolProp name="allowQuotedData">false</boolProp>
+        <stringProp name="shareMode">shareMode.all</stringProp>
+      </CSVDataSet>
+      <hashTree/>
+
+      <!-- Thread Group piloté par -Jthreads/-Jramp/-Jduration -->
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="TG READ-heavy" enabled="true">
+        <stringProp name="ThreadGroup.num_threads">${__P(threads,50)}</stringProp>
+        <stringProp name="ThreadGroup.ramp_time">${__P(ramp,60)}</stringProp>
+        <boolProp name="ThreadGroup.scheduler">true</boolProp>
+        <stringProp name="ThreadGroup.duration">${__P(duration,600)}</stringProp>
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController">
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+          <stringProp name="LoopController.loops">-1</stringProp>
+        </elementProp>
+      </ThreadGroup>
+      <hashTree>
+        <!-- 50% GET /items?page=&size=50 -->
+        <ThroughputController guiclass="ThroughputControllerGui" testclass="ThroughputController" testname="T-50% list items" enabled="true">
+          <intProp name="ThroughputController.style">1</intProp>
+          <doubleProp>
+            <name>ThroughputController.percent</name>
+            <value>50.0</value>
+            <savedValue>0.0</savedValue>
+          </doubleProp>
+          <boolProp name="ThroughputController.perThread">false</boolProp>
+        </ThroughputController>
+        <hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="GET /items?page=0&amp;size=50" enabled="true">
+            <boolProp name="HTTPSampler.postBodyRaw">false</boolProp>
+            <stringProp name="HTTPSampler.path">/items?page=0&amp;size=50</stringProp>
+            <stringProp name="HTTPSampler.method">GET</stringProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          </HTTPSamplerProxy>
+          <hashTree/>
+        </hashTree>
+
+        <!-- 20% GET /items?categoryId=... -->
+        <ThroughputController guiclass="ThroughputControllerGui" testclass="ThroughputController" testname="T-20% items by category" enabled="true">
+          <intProp name="ThroughputController.style">1</intProp>
+          <doubleProp>
+            <name>ThroughputController.percent</name>
+            <value>20.0</value>
+            <savedValue>0.0</savedValue>
+          </doubleProp>
+          <boolProp name="ThroughputController.perThread">false</boolProp>
+        </ThroughputController>
+        <hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="GET /items?categoryId=${categoryId}&amp;page=0&amp;size=50" enabled="true">
+            <stringProp name="HTTPSampler.path">/items?categoryId=${categoryId}&amp;page=0&amp;size=50</stringProp>
+            <stringProp name="HTTPSampler.method">GET</stringProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          </HTTPSamplerProxy>
+          <hashTree/>
+        </hashTree>
+
+        <!-- 20% GET /categories/{id}/items -->
+        <ThroughputController guiclass="ThroughputControllerGui" testclass="ThroughputController" testname="T-20% category items" enabled="true">
+          <intProp name="ThroughputController.style">1</intProp>
+          <doubleProp>
+            <name>ThroughputController.percent</name>
+            <value>20.0</value>
+            <savedValue>0.0</savedValue>
+          </doubleProp>
+          <boolProp name="ThroughputController.perThread">false</boolProp>
+        </ThroughputController>
+        <hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="GET /categories/${catId}/items?page=0&amp;size=50" enabled="true">
+            <stringProp name="HTTPSampler.path">/categories/${catId}/items?page=0&amp;size=50</stringProp>
+            <stringProp name="HTTPSampler.method">GET</stringProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          </HTTPSamplerProxy>
+          <hashTree/>
+        </hashTree>
+
+        <!-- 10% GET /categories?page=&size= -->
+        <ThroughputController guiclass="ThroughputControllerGui" testclass="ThroughputController" testname="T-10% list categories" enabled="true">
+          <intProp name="ThroughputController.style">1</intProp>
+          <doubleProp>
+            <name>ThroughputController.percent</name>
+            <value>10.0</value>
+            <savedValue>0.0</savedValue>
+          </doubleProp>
+          <boolProp name="ThroughputController.perThread">false</boolProp>
+        </ThroughputController>
+        <hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="GET /categories?page=0&amp;size=50" enabled="true">
+            <stringProp name="HTTPSampler.path">/categories?page=0&amp;size=50</stringProp>
+            <stringProp name="HTTPSampler.method">GET</stringProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          </HTTPSamplerProxy>
+          <hashTree/>
+        </hashTree>
+
+        <!-- Backend Listener InfluxDB v2 -->
+        <BackendListener guiclass="BackendListenerGui" testclass="BackendListener" testname="InfluxDB Backend" enabled="true">
+          <elementProp name="arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="influxdbUrl" elementType="Argument"><stringProp name="Argument.value">${__P(influx.url,)}</stringProp></elementProp>
+              <elementProp name="application" elementType="Argument"><stringProp name="Argument.value">${__P(app,rest-bench)}</stringProp></elementProp>
+              <elementProp name="measurement" elementType="Argument"><stringProp name="Argument.value">jmeter</stringProp></elementProp>
+              <elementProp name="summaryOnly" elementType="Argument"><stringProp name="Argument.value">false</stringProp></elementProp>
+              <elementProp name="samplersRegex" elementType="Argument"><stringProp name="Argument.value">.*</stringProp></elementProp>
+              <elementProp name="percentiles" elementType="Argument"><stringProp name="Argument.value">95;99</stringProp></elementProp>
+              <elementProp name="testTitle" elementType="Argument"><stringProp name="Argument.value">${__P(testTitle,read-heavy)}</stringProp></elementProp>
+              <elementProp name="influxdbToken" elementType="Argument"><stringProp name="Argument.value">${__P(influx.token,)}</stringProp></elementProp>
+              <elementProp name="TAG_testTitle" elementType="Argument"><stringProp name="Argument.value">${__P(tagTestTitle,read-heavy)}</stringProp></elementProp>
+              <elementProp name="org" elementType="Argument"><stringProp name="Argument.value">${__P(influx.org,perf)}</stringProp></elementProp>
+              <elementProp name="bucket" elementType="Argument"><stringProp name="Argument.value">${__P(influx.bucket,jmeter)}</stringProp></elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="classname">org.apache.jmeter.visualizers.backend.influxdb.InfluxdbBackendListenerClient</stringProp>
+        </BackendListener>
+        <hashTree/>
+      </hashTree>
+    </hashTree>
+  </hashTree>
+</jmeterTestPlan>

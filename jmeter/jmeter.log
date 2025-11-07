@@ -1,0 +1,293 @@
+2025-11-08 00:22:43,035 INFO o.a.j.u.JMeterUtils: Setting Locale to en_EN
+2025-11-08 00:22:43,066 INFO o.a.j.JMeter: Loading user properties from: /opt/apache-jmeter-5.5/bin/user.properties
+2025-11-08 00:22:43,068 INFO o.a.j.JMeter: Loading system properties from: /opt/apache-jmeter-5.5/bin/system.properties
+2025-11-08 00:22:43,069 INFO o.a.j.JMeter: Setting System property: log4j2.formatMsgNoLookups=true
+2025-11-08 00:22:43,069 INFO o.a.j.JMeter: Setting JMeter property: baseUrl=http://service-c:8082
+2025-11-08 00:22:43,069 INFO o.a.j.JMeter: Setting JMeter property: threads=30
+2025-11-08 00:22:43,070 INFO o.a.j.JMeter: Setting JMeter property: ramp=60
+2025-11-08 00:22:43,070 INFO o.a.j.JMeter: Setting JMeter property: duration=480
+2025-11-08 00:22:43,070 INFO o.a.j.JMeter: Setting JMeter property: categoriesCsv=/jmeter-data/categories_ids.csv
+2025-11-08 00:22:43,070 INFO o.a.j.JMeter: Setting JMeter property: itemsCsv=/jmeter-data/items_ids.csv
+2025-11-08 00:22:43,071 INFO o.a.j.JMeter: Setting JMeter property: influx.url=http://influxdb:8086
+2025-11-08 00:22:43,071 INFO o.a.j.JMeter: Setting JMeter property: influx.org=perf
+2025-11-08 00:22:43,071 INFO o.a.j.JMeter: Setting JMeter property: influx.bucket=jmeter
+2025-11-08 00:22:43,072 INFO o.a.j.JMeter: Setting JMeter property: influx.token=C4afzNpgy3VYb2GZ-10TJsi-wRh_Nu30UDzP-2VTC4FaO4qMM6YUo1vx4YciFHHNR_Qwf2N6WB5DwceU7FYQpg==
+2025-11-08 00:22:43,072 INFO o.a.j.JMeter: Setting JMeter property: testTitle=heavy-body
+2025-11-08 00:22:43,072 INFO o.a.j.JMeter: Setting JMeter property: tagTestTitle=heavy-body
+2025-11-08 00:22:43,091 INFO o.a.j.JMeter: Copyright (c) 1998-2022 The Apache Software Foundation
+2025-11-08 00:22:43,092 INFO o.a.j.JMeter: Version 5.5
+2025-11-08 00:22:43,092 INFO o.a.j.JMeter: java.version=1.8.0_275
+2025-11-08 00:22:43,092 INFO o.a.j.JMeter: java.vm.name=OpenJDK 64-Bit Server VM
+2025-11-08 00:22:43,093 INFO o.a.j.JMeter: os.name=Linux
+2025-11-08 00:22:43,093 INFO o.a.j.JMeter: os.arch=amd64
+2025-11-08 00:22:43,093 INFO o.a.j.JMeter: os.version=5.15.167.4-microsoft-standard-WSL2
+2025-11-08 00:22:43,094 INFO o.a.j.JMeter: file.encoding=UTF-8
+2025-11-08 00:22:43,094 INFO o.a.j.JMeter: java.awt.headless=true
+2025-11-08 00:22:43,094 INFO o.a.j.JMeter: Max memory     =5578424320
+2025-11-08 00:22:43,094 INFO o.a.j.JMeter: Available Processors =12
+2025-11-08 00:22:43,101 INFO o.a.j.JMeter: Default Locale=English (EN)
+2025-11-08 00:22:43,102 INFO o.a.j.JMeter: JMeter  Locale=English (EN)
+2025-11-08 00:22:43,102 INFO o.a.j.JMeter: JMeterHome=/opt/apache-jmeter-5.5
+2025-11-08 00:22:43,103 INFO o.a.j.JMeter: user.dir  =/test
+2025-11-08 00:22:43,104 INFO o.a.j.JMeter: PWD       =/test
+2025-11-08 00:22:43,104 INFO o.a.j.JMeter: IP: 172.21.0.9 Name: 1fa95dcade55 FullName: 1fa95dcade55
+2025-11-08 00:22:43,131 INFO o.a.j.s.FileServer: Default base='/test'
+2025-11-08 00:22:43,132 INFO o.a.j.s.FileServer: Set new base='/test'
+2025-11-08 00:22:43,242 INFO o.a.j.s.SaveService: Testplan (JMX) version: 2.2. Testlog (JTL) version: 2.2
+2025-11-08 00:22:43,259 INFO o.a.j.s.SaveService: Using SaveService properties file encoding UTF-8
+2025-11-08 00:22:43,264 INFO o.a.j.s.SaveService: Using SaveService properties version 5.0
+2025-11-08 00:22:43,269 INFO o.a.j.s.SaveService: Loading file: heavy-body.jmx
+2025-11-08 00:22:43,327 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/html is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2025-11-08 00:22:43,328 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for application/xhtml+xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2025-11-08 00:22:43,328 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for application/xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2025-11-08 00:22:43,328 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2025-11-08 00:22:43,329 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/vnd.wap.wml is org.apache.jmeter.protocol.http.parser.RegexpHTMLParser
+2025-11-08 00:22:43,329 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/css is org.apache.jmeter.protocol.http.parser.CssParser
+2025-11-08 00:22:43,587 INFO o.a.j.s.SampleResult: Note: Sample TimeStamps are START times
+2025-11-08 00:22:43,588 INFO o.a.j.s.SampleResult: sampleresult.default.encoding is set to ISO-8859-1
+2025-11-08 00:22:43,588 INFO o.a.j.s.SampleResult: sampleresult.useNanoTime=true
+2025-11-08 00:22:43,588 INFO o.a.j.s.SampleResult: sampleresult.nanoThreadSleep=5000
+2025-11-08 00:22:43,600 INFO o.a.j.JMeter: Creating summariser <summary>
+2025-11-08 00:22:43,608 INFO o.a.j.e.StandardJMeterEngine: Running the test!
+2025-11-08 00:22:43,609 INFO o.a.j.s.SampleEvent: List of sample_variables: []
+2025-11-08 00:22:43,609 INFO o.a.j.s.SampleEvent: List of sample_variables: []
+2025-11-08 00:22:43,614 INFO o.a.j.e.u.CompoundVariable: Note: Function class names must contain the string: '.functions.'
+2025-11-08 00:22:43,614 INFO o.a.j.e.u.CompoundVariable: Note: Function class names must not contain the string: '.gui.'
+2025-11-08 00:22:43,852 INFO o.a.j.v.b.BackendListener: InfluxDB Backend Listener: Starting worker with class: class org.apache.jmeter.visualizers.backend.influxdb.InfluxdbBackendListenerClient and queue capacity: 5000
+2025-11-08 00:22:43,853 INFO o.a.j.v.b.BackendListener: InfluxDB Backend Listener: Started  worker with class: class org.apache.jmeter.visualizers.backend.influxdb.InfluxdbBackendListenerClient
+2025-11-08 00:22:44,019 INFO o.a.j.JMeter: Running test (1762557764019)
+2025-11-08 00:22:44,096 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 1 : HEAVY-body Thread Group
+2025-11-08 00:22:44,097 INFO o.a.j.e.StandardJMeterEngine: Starting 30 threads for group HEAVY-body Thread Group.
+2025-11-08 00:22:44,097 INFO o.a.j.e.StandardJMeterEngine: Thread will continue on error
+2025-11-08 00:22:44,098 INFO o.a.j.t.ThreadGroup: Starting thread group... number=1 threads=30 ramp-up=60 delayedStart=false
+2025-11-08 00:22:44,118 INFO o.a.j.t.ThreadGroup: Started thread group number 1
+2025-11-08 00:22:44,119 INFO o.a.j.e.StandardJMeterEngine: All thread groups have been started
+2025-11-08 00:22:44,191 INFO o.a.j.t.JMeterThread: Thread started: HEAVY-body Thread Group 1-1
+2025-11-08 00:22:44,194 INFO o.a.j.s.FileServer: Stored: /jmeter-data/items_ids.csv
+2025-11-08 00:22:44,222 INFO o.a.j.p.h.s.HTTPHCAbstractImpl: Local host = 1fa95dcade55
+2025-11-08 00:22:44,227 INFO o.a.j.p.h.s.HTTPHC4Impl: HTTP request retry count = 0
+2025-11-08 00:22:44,241 ERROR o.a.j.v.b.i.HttpMetricsSender: Error writing metrics to influxDB Url: http://influxdb:8086/write?db=jmeter, responseCode: 401, responseBody: {"code":"unauthorized","message":"unauthorized access"}
+2025-11-08 00:22:46,175 INFO o.a.j.t.JMeterThread: Thread started: HEAVY-body Thread Group 1-2
+2025-11-08 00:22:48,184 INFO o.a.j.t.JMeterThread: Thread started: HEAVY-body Thread Group 1-3
+2025-11-08 00:22:49,186 ERROR o.a.j.v.b.i.HttpMetricsSender: Error writing metrics to influxDB Url: http://influxdb:8086/write?db=jmeter, responseCode: 401, responseBody: {"code":"unauthorized","message":"unauthorized access"}
+2025-11-08 00:22:50,182 INFO o.a.j.t.JMeterThread: Thread started: HEAVY-body Thread Group 1-4
+2025-11-08 00:22:52,181 INFO o.a.j.t.JMeterThread: Thread started: HEAVY-body Thread Group 1-5
+2025-11-08 00:22:54,146 ERROR o.a.j.v.b.i.HttpMetricsSender: Error writing metrics to influxDB Url: http://influxdb:8086/write?db=jmeter, responseCode: 401, responseBody: {"code":"unauthorized","message":"unauthorized access"}
+2025-11-08 00:22:54,181 INFO o.a.j.t.JMeterThread: Thread started: HEAVY-body Thread Group 1-6
+2025-11-08 00:22:56,180 INFO o.a.j.t.JMeterThread: Thread started: HEAVY-body Thread Group 1-7
+2025-11-08 00:22:58,177 INFO o.a.j.t.JMeterThread: Thread started: HEAVY-body Thread Group 1-8
+2025-11-08 00:22:59,145 ERROR o.a.j.v.b.i.HttpMetricsSender: Error writing metrics to influxDB Url: http://influxdb:8086/write?db=jmeter, responseCode: 401, responseBody: {"code":"unauthorized","message":"unauthorized access"}
+2025-11-08 00:23:00,001 INFO o.a.j.r.Summariser: summary +  42994 in 00:00:16 = 2690.3/s Avg:     1 Min:     0 Max:   116 Err: 42994 (100.00%) Active: 8 Started: 8 Finished: 0
+2025-11-08 00:23:00,176 INFO o.a.j.t.JMeterThread: Thread started: HEAVY-body Thread Group 1-9
+2025-11-08 00:23:02,176 INFO o.a.j.t.JMeterThread: Thread started: HEAVY-body Thread Group 1-10
+2025-11-08 00:23:04,138 ERROR o.a.j.v.b.i.HttpMetricsSender: Error writing metrics to influxDB Url: http://influxdb:8086/write?db=jmeter, responseCode: 401, responseBody: {"code":"unauthorized","message":"unauthorized access"}
+2025-11-08 00:23:04,175 INFO o.a.j.t.JMeterThread: Thread started: HEAVY-body Thread Group 1-11
+2025-11-08 00:23:06,174 INFO o.a.j.t.JMeterThread: Thread started: HEAVY-body Thread Group 1-12
+2025-11-08 00:23:08,176 INFO o.a.j.t.JMeterThread: Thread started: HEAVY-body Thread Group 1-13
+2025-11-08 00:23:09,255 ERROR o.a.j.v.b.i.HttpMetricsSender: Error writing metrics to influxDB Url: http://influxdb:8086/write?db=jmeter, responseCode: 401, responseBody: {"code":"unauthorized","message":"unauthorized access"}
+2025-11-08 00:23:10,168 INFO o.a.j.t.JMeterThread: Thread started: HEAVY-body Thread Group 1-14
+2025-11-08 00:23:12,175 INFO o.a.j.t.JMeterThread: Thread started: HEAVY-body Thread Group 1-15
+2025-11-08 00:23:14,154 ERROR o.a.j.v.b.i.HttpMetricsSender: Error writing metrics to influxDB Url: http://influxdb:8086/write?db=jmeter, responseCode: 401, responseBody: {"code":"unauthorized","message":"unauthorized access"}
+2025-11-08 00:23:14,174 INFO o.a.j.t.JMeterThread: Thread started: HEAVY-body Thread Group 1-16
+2025-11-08 00:23:16,165 INFO o.a.j.t.JMeterThread: Thread started: HEAVY-body Thread Group 1-17
+2025-11-08 00:23:18,165 INFO o.a.j.t.JMeterThread: Thread started: HEAVY-body Thread Group 1-18
+2025-11-08 00:23:19,307 ERROR o.a.j.v.b.i.HttpMetricsSender: Error writing metrics to influxDB Url: http://influxdb:8086/write?db=jmeter, responseCode: 401, responseBody: {"code":"unauthorized","message":"unauthorized access"}
+2025-11-08 00:23:20,174 INFO o.a.j.t.JMeterThread: Thread started: HEAVY-body Thread Group 1-19
+2025-11-08 00:23:22,172 INFO o.a.j.t.JMeterThread: Thread started: HEAVY-body Thread Group 1-20
+2025-11-08 00:23:24,172 INFO o.a.j.t.JMeterThread: Thread started: HEAVY-body Thread Group 1-21
+2025-11-08 00:23:24,445 ERROR o.a.j.v.b.i.HttpMetricsSender: Error writing metrics to influxDB Url: http://influxdb:8086/write?db=jmeter, responseCode: 401, responseBody: {"code":"unauthorized","message":"unauthorized access"}
+2025-11-08 00:23:26,164 INFO o.a.j.t.JMeterThread: Thread started: HEAVY-body Thread Group 1-22
+2025-11-08 00:23:28,164 INFO o.a.j.t.JMeterThread: Thread started: HEAVY-body Thread Group 1-23
+2025-11-08 00:23:29,606 ERROR o.a.j.v.b.i.HttpMetricsSender: Error writing metrics to influxDB Url: http://influxdb:8086/write?db=jmeter, responseCode: 401, responseBody: {"code":"unauthorized","message":"unauthorized access"}
+2025-11-08 00:23:30,001 INFO o.a.j.r.Summariser: summary +  60359 in 00:00:30 = 2012.0/s Avg:     7 Min:     0 Max:   168 Err: 60359 (100.00%) Active: 23 Started: 23 Finished: 0
+2025-11-08 00:23:30,025 INFO o.a.j.r.Summariser: summary = 103353 in 00:00:46 = 2247.7/s Avg:     4 Min:     0 Max:   168 Err: 103353 (100.00%)
+2025-11-08 00:23:30,171 INFO o.a.j.t.JMeterThread: Thread started: HEAVY-body Thread Group 1-24
+2025-11-08 00:23:32,167 INFO o.a.j.t.JMeterThread: Thread started: HEAVY-body Thread Group 1-25
+2025-11-08 00:23:34,171 INFO o.a.j.t.JMeterThread: Thread started: HEAVY-body Thread Group 1-26
+2025-11-08 00:23:34,515 ERROR o.a.j.v.b.i.HttpMetricsSender: Error writing metrics to influxDB Url: http://influxdb:8086/write?db=jmeter, responseCode: 401, responseBody: {"code":"unauthorized","message":"unauthorized access"}
+2025-11-08 00:23:36,169 INFO o.a.j.t.JMeterThread: Thread started: HEAVY-body Thread Group 1-27
+2025-11-08 00:23:38,166 INFO o.a.j.t.JMeterThread: Thread started: HEAVY-body Thread Group 1-28
+2025-11-08 00:23:39,716 ERROR o.a.j.v.b.i.HttpMetricsSender: Error writing metrics to influxDB Url: http://influxdb:8086/write?db=jmeter, responseCode: 401, responseBody: {"code":"unauthorized","message":"unauthorized access"}
+2025-11-08 00:23:40,166 INFO o.a.j.t.JMeterThread: Thread started: HEAVY-body Thread Group 1-29
+2025-11-08 00:23:42,166 INFO o.a.j.t.JMeterThread: Thread started: HEAVY-body Thread Group 1-30
+2025-11-08 00:23:44,233 ERROR o.a.j.v.b.i.HttpMetricsSender: Error writing metrics to influxDB Url: http://influxdb:8086/write?db=jmeter, responseCode: 401, responseBody: {"code":"unauthorized","message":"unauthorized access"}
+2025-11-08 00:23:49,462 ERROR o.a.j.v.b.i.HttpMetricsSender: Error writing metrics to influxDB Url: http://influxdb:8086/write?db=jmeter, responseCode: 401, responseBody: {"code":"unauthorized","message":"unauthorized access"}
+2025-11-08 00:23:54,435 ERROR o.a.j.v.b.i.HttpMetricsSender: Error writing metrics to influxDB Url: http://influxdb:8086/write?db=jmeter, responseCode: 401, responseBody: {"code":"unauthorized","message":"unauthorized access"}
+2025-11-08 00:23:59,392 ERROR o.a.j.v.b.i.HttpMetricsSender: Error writing metrics to influxDB Url: http://influxdb:8086/write?db=jmeter, responseCode: 401, responseBody: {"code":"unauthorized","message":"unauthorized access"}
+2025-11-08 00:24:00,003 INFO o.a.j.r.Summariser: summary +  59919 in 00:00:30 = 1997.3/s Avg:    13 Min:     0 Max:   289 Err: 59919 (100.00%) Active: 30 Started: 30 Finished: 0
+2025-11-08 00:24:00,004 INFO o.a.j.r.Summariser: summary = 163272 in 00:01:16 = 2148.9/s Avg:     7 Min:     0 Max:   289 Err: 163272 (100.00%)
+2025-11-08 00:24:04,671 ERROR o.a.j.v.b.i.HttpMetricsSender: Error writing metrics to influxDB Url: http://influxdb:8086/write?db=jmeter, responseCode: 401, responseBody: {"code":"unauthorized","message":"unauthorized access"}
+2025-11-08 00:24:09,421 ERROR o.a.j.v.b.i.HttpMetricsSender: Error writing metrics to influxDB Url: http://influxdb:8086/write?db=jmeter, responseCode: 401, responseBody: {"code":"unauthorized","message":"unauthorized access"}
+2025-11-08 00:24:14,826 ERROR o.a.j.v.b.i.HttpMetricsSender: Error writing metrics to influxDB Url: http://influxdb:8086/write?db=jmeter, responseCode: 401, responseBody: {"code":"unauthorized","message":"unauthorized access"}
+2025-11-08 00:24:20,092 ERROR o.a.j.v.b.i.HttpMetricsSender: Error writing metrics to influxDB Url: http://influxdb:8086/write?db=jmeter, responseCode: 401, responseBody: {"code":"unauthorized","message":"unauthorized access"}
+2025-11-08 00:24:24,708 ERROR o.a.j.v.b.i.HttpMetricsSender: Error writing metrics to influxDB Url: http://influxdb:8086/write?db=jmeter, responseCode: 401, responseBody: {"code":"unauthorized","message":"unauthorized access"}
+2025-11-08 00:24:29,897 ERROR o.a.j.v.b.i.HttpMetricsSender: Error writing metrics to influxDB Url: http://influxdb:8086/write?db=jmeter, responseCode: 401, responseBody: {"code":"unauthorized","message":"unauthorized access"}
+2025-11-08 00:24:30,001 INFO o.a.j.r.Summariser: summary +  59161 in 00:00:30 = 1972.0/s Avg:    14 Min:     0 Max:   245 Err: 59161 (100.00%) Active: 30 Started: 30 Finished: 0
+2025-11-08 00:24:30,017 INFO o.a.j.r.Summariser: summary = 222433 in 00:01:46 = 2098.8/s Avg:     9 Min:     0 Max:   289 Err: 222433 (100.00%)
+2025-11-08 00:24:34,718 ERROR o.a.j.v.b.i.HttpMetricsSender: Error writing metrics to influxDB Url: http://influxdb:8086/write?db=jmeter, responseCode: 401, responseBody: {"code":"unauthorized","message":"unauthorized access"}
+2025-11-08 00:24:39,946 ERROR o.a.j.v.b.i.HttpMetricsSender: Error writing metrics to influxDB Url: http://influxdb:8086/write?db=jmeter, responseCode: 401, responseBody: {"code":"unauthorized","message":"unauthorized access"}
+2025-11-08 00:24:44,871 ERROR o.a.j.v.b.i.HttpMetricsSender: Error writing metrics to influxDB Url: http://influxdb:8086/write?db=jmeter, responseCode: 401, responseBody: {"code":"unauthorized","message":"unauthorized access"}
+2025-11-08 00:24:49,786 ERROR o.a.j.v.b.i.HttpMetricsSender: Error writing metrics to influxDB Url: http://influxdb:8086/write?db=jmeter, responseCode: 401, responseBody: {"code":"unauthorized","message":"unauthorized access"}
+2025-11-08 00:24:54,911 ERROR o.a.j.v.b.i.HttpMetricsSender: Error writing metrics to influxDB Url: http://influxdb:8086/write?db=jmeter, responseCode: 401, responseBody: {"code":"unauthorized","message":"unauthorized access"}
+2025-11-08 00:24:59,740 ERROR o.a.j.v.b.i.HttpMetricsSender: Error writing metrics to influxDB Url: http://influxdb:8086/write?db=jmeter, responseCode: 401, responseBody: {"code":"unauthorized","message":"unauthorized access"}
+2025-11-08 00:25:00,000 INFO o.a.j.r.Summariser: summary +  58864 in 00:00:30 = 1962.1/s Avg:    14 Min:     0 Max:   456 Err: 58864 (100.00%) Active: 30 Started: 30 Finished: 0
+2025-11-08 00:25:00,012 INFO o.a.j.r.Summariser: summary = 281297 in 00:02:16 = 2068.6/s Avg:    10 Min:     0 Max:   456 Err: 281297 (100.00%)
+2025-11-08 00:25:04,720 ERROR o.a.j.v.b.i.HttpMetricsSender: Error writing metrics to influxDB Url: http://influxdb:8086/write?db=jmeter, responseCode: 401, responseBody: {"code":"unauthorized","message":"unauthorized access"}
+2025-11-08 00:25:09,676 ERROR o.a.j.v.b.i.HttpMetricsSender: Error writing metrics to influxDB Url: http://influxdb:8086/write?db=jmeter, responseCode: 401, responseBody: {"code":"unauthorized","message":"unauthorized access"}
+2025-11-08 00:25:14,933 ERROR o.a.j.v.b.i.HttpMetricsSender: Error writing metrics to influxDB Url: http://influxdb:8086/write?db=jmeter, responseCode: 401, responseBody: {"code":"unauthorized","message":"unauthorized access"}
+2025-11-08 00:25:19,393 ERROR o.a.j.v.b.i.HttpMetricsSender: Error writing metrics to influxDB Url: http://influxdb:8086/write?db=jmeter, responseCode: 401, responseBody: {"code":"unauthorized","message":"unauthorized access"}
+2025-11-08 00:25:24,842 ERROR o.a.j.v.b.i.HttpMetricsSender: Error writing metrics to influxDB Url: http://influxdb:8086/write?db=jmeter, responseCode: 401, responseBody: {"code":"unauthorized","message":"unauthorized access"}
+2025-11-08 00:25:29,623 ERROR o.a.j.v.b.i.HttpMetricsSender: Error writing metrics to influxDB Url: http://influxdb:8086/write?db=jmeter, responseCode: 401, responseBody: {"code":"unauthorized","message":"unauthorized access"}
+2025-11-08 00:25:30,001 INFO o.a.j.r.Summariser: summary +  60920 in 00:00:30 = 2030.7/s Avg:    13 Min:     0 Max:   203 Err: 60920 (100.00%) Active: 30 Started: 30 Finished: 0
+2025-11-08 00:25:30,002 INFO o.a.j.r.Summariser: summary = 342217 in 00:02:46 = 2061.8/s Avg:    11 Min:     0 Max:   456 Err: 342217 (100.00%)
+2025-11-08 00:25:34,847 ERROR o.a.j.v.b.i.HttpMetricsSender: Error writing metrics to influxDB Url: http://influxdb:8086/write?db=jmeter, responseCode: 401, responseBody: {"code":"unauthorized","message":"unauthorized access"}
+2025-11-08 00:25:39,614 ERROR o.a.j.v.b.i.HttpMetricsSender: Error writing metrics to influxDB Url: http://influxdb:8086/write?db=jmeter, responseCode: 401, responseBody: {"code":"unauthorized","message":"unauthorized access"}
+2025-11-08 00:25:44,701 ERROR o.a.j.v.b.i.HttpMetricsSender: Error writing metrics to influxDB Url: http://influxdb:8086/write?db=jmeter, responseCode: 401, responseBody: {"code":"unauthorized","message":"unauthorized access"}
+2025-11-08 00:25:50,410 ERROR o.a.j.v.b.i.HttpMetricsSender: Error writing metrics to influxDB Url: http://influxdb:8086/write?db=jmeter, responseCode: 401, responseBody: {"code":"unauthorized","message":"unauthorized access"}
+2025-11-08 00:25:54,588 ERROR o.a.j.v.b.i.HttpMetricsSender: Error writing metrics to influxDB Url: http://influxdb:8086/write?db=jmeter, responseCode: 401, responseBody: {"code":"unauthorized","message":"unauthorized access"}
+2025-11-08 00:26:00,000 INFO o.a.j.r.Summariser: summary +  61786 in 00:00:30 = 2059.6/s Avg:    13 Min:     0 Max:   234 Err: 61786 (100.00%) Active: 30 Started: 30 Finished: 0
+2025-11-08 00:26:00,001 INFO o.a.j.r.Summariser: summary = 404003 in 00:03:16 = 2061.4/s Avg:    11 Min:     0 Max:   456 Err: 404003 (100.00%)
+2025-11-08 00:26:00,106 ERROR o.a.j.v.b.i.HttpMetricsSender: Error writing metrics to influxDB Url: http://influxdb:8086/write?db=jmeter, responseCode: 401, responseBody: {"code":"unauthorized","message":"unauthorized access"}
+2025-11-08 00:26:04,630 ERROR o.a.j.v.b.i.HttpMetricsSender: Error writing metrics to influxDB Url: http://influxdb:8086/write?db=jmeter, responseCode: 401, responseBody: {"code":"unauthorized","message":"unauthorized access"}
+2025-11-08 00:26:09,416 ERROR o.a.j.v.b.i.HttpMetricsSender: Error writing metrics to influxDB Url: http://influxdb:8086/write?db=jmeter, responseCode: 401, responseBody: {"code":"unauthorized","message":"unauthorized access"}
+2025-11-08 00:26:14,697 ERROR o.a.j.v.b.i.HttpMetricsSender: Error writing metrics to influxDB Url: http://influxdb:8086/write?db=jmeter, responseCode: 401, responseBody: {"code":"unauthorized","message":"unauthorized access"}
+2025-11-08 00:26:19,416 ERROR o.a.j.v.b.i.HttpMetricsSender: Error writing metrics to influxDB Url: http://influxdb:8086/write?db=jmeter, responseCode: 401, responseBody: {"code":"unauthorized","message":"unauthorized access"}
+2025-11-08 00:26:24,950 ERROR o.a.j.v.b.i.HttpMetricsSender: Error writing metrics to influxDB Url: http://influxdb:8086/write?db=jmeter, responseCode: 401, responseBody: {"code":"unauthorized","message":"unauthorized access"}
+2025-11-08 00:26:29,932 ERROR o.a.j.v.b.i.HttpMetricsSender: Error writing metrics to influxDB Url: http://influxdb:8086/write?db=jmeter, responseCode: 401, responseBody: {"code":"unauthorized","message":"unauthorized access"}
+2025-11-08 00:26:30,000 INFO o.a.j.r.Summariser: summary +  59847 in 00:00:30 = 1994.9/s Avg:    14 Min:     0 Max:   211 Err: 59847 (100.00%) Active: 30 Started: 30 Finished: 0
+2025-11-08 00:26:30,001 INFO o.a.j.r.Summariser: summary = 463850 in 00:03:46 = 2052.6/s Avg:    11 Min:     0 Max:   456 Err: 463850 (100.00%)
+2025-11-08 00:26:34,577 ERROR o.a.j.v.b.i.HttpMetricsSender: Error writing metrics to influxDB Url: http://influxdb:8086/write?db=jmeter, responseCode: 401, responseBody: {"code":"unauthorized","message":"unauthorized access"}
+2025-11-08 00:26:39,744 ERROR o.a.j.v.b.i.HttpMetricsSender: Error writing metrics to influxDB Url: http://influxdb:8086/write?db=jmeter, responseCode: 401, responseBody: {"code":"unauthorized","message":"unauthorized access"}
+2025-11-08 00:26:44,823 ERROR o.a.j.v.b.i.HttpMetricsSender: Error writing metrics to influxDB Url: http://influxdb:8086/write?db=jmeter, responseCode: 401, responseBody: {"code":"unauthorized","message":"unauthorized access"}
+2025-11-08 00:26:49,515 ERROR o.a.j.v.b.i.HttpMetricsSender: Error writing metrics to influxDB Url: http://influxdb:8086/write?db=jmeter, responseCode: 401, responseBody: {"code":"unauthorized","message":"unauthorized access"}
+2025-11-08 00:26:54,493 ERROR o.a.j.v.b.i.HttpMetricsSender: Error writing metrics to influxDB Url: http://influxdb:8086/write?db=jmeter, responseCode: 401, responseBody: {"code":"unauthorized","message":"unauthorized access"}
+2025-11-08 00:26:59,628 ERROR o.a.j.v.b.i.HttpMetricsSender: Error writing metrics to influxDB Url: http://influxdb:8086/write?db=jmeter, responseCode: 401, responseBody: {"code":"unauthorized","message":"unauthorized access"}
+2025-11-08 00:27:00,001 INFO o.a.j.r.Summariser: summary +  60482 in 00:00:30 = 2016.0/s Avg:    13 Min:     0 Max:   219 Err: 60482 (100.00%) Active: 30 Started: 30 Finished: 0
+2025-11-08 00:27:00,002 INFO o.a.j.r.Summariser: summary = 524332 in 00:04:16 = 2048.3/s Avg:    12 Min:     0 Max:   456 Err: 524332 (100.00%)
+2025-11-08 00:27:04,596 ERROR o.a.j.v.b.i.HttpMetricsSender: Error writing metrics to influxDB Url: http://influxdb:8086/write?db=jmeter, responseCode: 401, responseBody: {"code":"unauthorized","message":"unauthorized access"}
+2025-11-08 00:27:10,039 ERROR o.a.j.v.b.i.HttpMetricsSender: Error writing metrics to influxDB Url: http://influxdb:8086/write?db=jmeter, responseCode: 401, responseBody: {"code":"unauthorized","message":"unauthorized access"}
+2025-11-08 00:27:14,328 ERROR o.a.j.v.b.i.HttpMetricsSender: Error writing metrics to influxDB Url: http://influxdb:8086/write?db=jmeter, responseCode: 401, responseBody: {"code":"unauthorized","message":"unauthorized access"}
+2025-11-08 00:27:19,806 ERROR o.a.j.v.b.i.HttpMetricsSender: Error writing metrics to influxDB Url: http://influxdb:8086/write?db=jmeter, responseCode: 401, responseBody: {"code":"unauthorized","message":"unauthorized access"}
+2025-11-08 00:27:24,614 ERROR o.a.j.v.b.i.HttpMetricsSender: Error writing metrics to influxDB Url: http://influxdb:8086/write?db=jmeter, responseCode: 401, responseBody: {"code":"unauthorized","message":"unauthorized access"}
+2025-11-08 00:27:29,507 ERROR o.a.j.v.b.i.HttpMetricsSender: Error writing metrics to influxDB Url: http://influxdb:8086/write?db=jmeter, responseCode: 401, responseBody: {"code":"unauthorized","message":"unauthorized access"}
+2025-11-08 00:27:30,000 INFO o.a.j.r.Summariser: summary +  60271 in 00:00:30 = 2009.1/s Avg:    13 Min:     0 Max:   234 Err: 60271 (100.00%) Active: 30 Started: 30 Finished: 0
+2025-11-08 00:27:30,045 INFO o.a.j.r.Summariser: summary = 584603 in 00:04:46 = 2044.2/s Avg:    12 Min:     0 Max:   456 Err: 584603 (100.00%)
+2025-11-08 00:27:34,904 ERROR o.a.j.v.b.i.HttpMetricsSender: Error writing metrics to influxDB Url: http://influxdb:8086/write?db=jmeter, responseCode: 401, responseBody: {"code":"unauthorized","message":"unauthorized access"}
+2025-11-08 00:27:39,656 ERROR o.a.j.v.b.i.HttpMetricsSender: Error writing metrics to influxDB Url: http://influxdb:8086/write?db=jmeter, responseCode: 401, responseBody: {"code":"unauthorized","message":"unauthorized access"}
+2025-11-08 00:27:44,774 ERROR o.a.j.v.b.i.HttpMetricsSender: Error writing metrics to influxDB Url: http://influxdb:8086/write?db=jmeter, responseCode: 401, responseBody: {"code":"unauthorized","message":"unauthorized access"}
+2025-11-08 00:27:49,394 ERROR o.a.j.v.b.i.HttpMetricsSender: Error writing metrics to influxDB Url: http://influxdb:8086/write?db=jmeter, responseCode: 401, responseBody: {"code":"unauthorized","message":"unauthorized access"}
+2025-11-08 00:27:54,740 ERROR o.a.j.v.b.i.HttpMetricsSender: Error writing metrics to influxDB Url: http://influxdb:8086/write?db=jmeter, responseCode: 401, responseBody: {"code":"unauthorized","message":"unauthorized access"}
+2025-11-08 00:27:59,533 ERROR o.a.j.v.b.i.HttpMetricsSender: Error writing metrics to influxDB Url: http://influxdb:8086/write?db=jmeter, responseCode: 401, responseBody: {"code":"unauthorized","message":"unauthorized access"}
+2025-11-08 00:28:00,002 INFO o.a.j.r.Summariser: summary +  60044 in 00:00:30 = 2001.4/s Avg:    13 Min:     0 Max:   198 Err: 60044 (100.00%) Active: 30 Started: 30 Finished: 0
+2025-11-08 00:28:00,011 INFO o.a.j.r.Summariser: summary = 644647 in 00:05:16 = 2040.1/s Avg:    12 Min:     0 Max:   456 Err: 644647 (100.00%)
+2025-11-08 00:28:04,391 ERROR o.a.j.v.b.i.HttpMetricsSender: Error writing metrics to influxDB Url: http://influxdb:8086/write?db=jmeter, responseCode: 401, responseBody: {"code":"unauthorized","message":"unauthorized access"}
+2025-11-08 00:28:09,529 ERROR o.a.j.v.b.i.HttpMetricsSender: Error writing metrics to influxDB Url: http://influxdb:8086/write?db=jmeter, responseCode: 401, responseBody: {"code":"unauthorized","message":"unauthorized access"}
+2025-11-08 00:28:14,989 ERROR o.a.j.v.b.i.HttpMetricsSender: Error writing metrics to influxDB Url: http://influxdb:8086/write?db=jmeter, responseCode: 401, responseBody: {"code":"unauthorized","message":"unauthorized access"}
+2025-11-08 00:28:19,868 ERROR o.a.j.v.b.i.HttpMetricsSender: Error writing metrics to influxDB Url: http://influxdb:8086/write?db=jmeter, responseCode: 401, responseBody: {"code":"unauthorized","message":"unauthorized access"}
+2025-11-08 00:28:24,458 ERROR o.a.j.v.b.i.HttpMetricsSender: Error writing metrics to influxDB Url: http://influxdb:8086/write?db=jmeter, responseCode: 401, responseBody: {"code":"unauthorized","message":"unauthorized access"}
+2025-11-08 00:28:29,848 ERROR o.a.j.v.b.i.HttpMetricsSender: Error writing metrics to influxDB Url: http://influxdb:8086/write?db=jmeter, responseCode: 401, responseBody: {"code":"unauthorized","message":"unauthorized access"}
+2025-11-08 00:28:30,001 INFO o.a.j.r.Summariser: summary +  59780 in 00:00:30 = 1992.7/s Avg:    14 Min:     0 Max:   202 Err: 59780 (100.00%) Active: 30 Started: 30 Finished: 0
+2025-11-08 00:28:30,030 INFO o.a.j.r.Summariser: summary = 704427 in 00:05:46 = 2036.0/s Avg:    12 Min:     0 Max:   456 Err: 704427 (100.00%)
+2025-11-08 00:28:34,461 ERROR o.a.j.v.b.i.HttpMetricsSender: Error writing metrics to influxDB Url: http://influxdb:8086/write?db=jmeter, responseCode: 401, responseBody: {"code":"unauthorized","message":"unauthorized access"}
+2025-11-08 00:28:39,693 ERROR o.a.j.v.b.i.HttpMetricsSender: Error writing metrics to influxDB Url: http://influxdb:8086/write?db=jmeter, responseCode: 401, responseBody: {"code":"unauthorized","message":"unauthorized access"}
+2025-11-08 00:28:44,711 ERROR o.a.j.v.b.i.HttpMetricsSender: Error writing metrics to influxDB Url: http://influxdb:8086/write?db=jmeter, responseCode: 401, responseBody: {"code":"unauthorized","message":"unauthorized access"}
+2025-11-08 00:28:49,614 ERROR o.a.j.v.b.i.HttpMetricsSender: Error writing metrics to influxDB Url: http://influxdb:8086/write?db=jmeter, responseCode: 401, responseBody: {"code":"unauthorized","message":"unauthorized access"}
+2025-11-08 00:28:54,594 ERROR o.a.j.v.b.i.HttpMetricsSender: Error writing metrics to influxDB Url: http://influxdb:8086/write?db=jmeter, responseCode: 401, responseBody: {"code":"unauthorized","message":"unauthorized access"}
+2025-11-08 00:28:59,668 ERROR o.a.j.v.b.i.HttpMetricsSender: Error writing metrics to influxDB Url: http://influxdb:8086/write?db=jmeter, responseCode: 401, responseBody: {"code":"unauthorized","message":"unauthorized access"}
+2025-11-08 00:29:00,000 INFO o.a.j.r.Summariser: summary +  57925 in 00:00:30 = 1930.9/s Avg:    14 Min:     0 Max:   721 Err: 57925 (100.00%) Active: 30 Started: 30 Finished: 0
+2025-11-08 00:29:00,004 INFO o.a.j.r.Summariser: summary = 762352 in 00:06:16 = 2027.6/s Avg:    12 Min:     0 Max:   721 Err: 762352 (100.00%)
+2025-11-08 00:29:04,515 ERROR o.a.j.v.b.i.HttpMetricsSender: Error writing metrics to influxDB Url: http://influxdb:8086/write?db=jmeter, responseCode: 401, responseBody: {"code":"unauthorized","message":"unauthorized access"}
+2025-11-08 00:29:09,410 ERROR o.a.j.v.b.i.HttpMetricsSender: Error writing metrics to influxDB Url: http://influxdb:8086/write?db=jmeter, responseCode: 401, responseBody: {"code":"unauthorized","message":"unauthorized access"}
+2025-11-08 00:29:14,640 ERROR o.a.j.v.b.i.HttpMetricsSender: Error writing metrics to influxDB Url: http://influxdb:8086/write?db=jmeter, responseCode: 401, responseBody: {"code":"unauthorized","message":"unauthorized access"}
+2025-11-08 00:29:19,555 ERROR o.a.j.v.b.i.HttpMetricsSender: Error writing metrics to influxDB Url: http://influxdb:8086/write?db=jmeter, responseCode: 401, responseBody: {"code":"unauthorized","message":"unauthorized access"}
+2025-11-08 00:29:24,383 ERROR o.a.j.v.b.i.HttpMetricsSender: Error writing metrics to influxDB Url: http://influxdb:8086/write?db=jmeter, responseCode: 401, responseBody: {"code":"unauthorized","message":"unauthorized access"}
+2025-11-08 00:29:29,599 ERROR o.a.j.v.b.i.HttpMetricsSender: Error writing metrics to influxDB Url: http://influxdb:8086/write?db=jmeter, responseCode: 401, responseBody: {"code":"unauthorized","message":"unauthorized access"}
+2025-11-08 00:29:30,001 INFO o.a.j.r.Summariser: summary +  60033 in 00:00:30 = 2001.1/s Avg:    14 Min:     0 Max:   190 Err: 60033 (100.00%) Active: 30 Started: 30 Finished: 0
+2025-11-08 00:29:30,002 INFO o.a.j.r.Summariser: summary = 822385 in 00:06:46 = 2025.7/s Avg:    12 Min:     0 Max:   721 Err: 822385 (100.00%)
+2025-11-08 00:29:34,975 ERROR o.a.j.v.b.i.HttpMetricsSender: Error writing metrics to influxDB Url: http://influxdb:8086/write?db=jmeter, responseCode: 401, responseBody: {"code":"unauthorized","message":"unauthorized access"}
+2025-11-08 00:29:39,786 ERROR o.a.j.v.b.i.HttpMetricsSender: Error writing metrics to influxDB Url: http://influxdb:8086/write?db=jmeter, responseCode: 401, responseBody: {"code":"unauthorized","message":"unauthorized access"}
+2025-11-08 00:29:44,556 ERROR o.a.j.v.b.i.HttpMetricsSender: Error writing metrics to influxDB Url: http://influxdb:8086/write?db=jmeter, responseCode: 401, responseBody: {"code":"unauthorized","message":"unauthorized access"}
+2025-11-08 00:29:49,625 ERROR o.a.j.v.b.i.HttpMetricsSender: Error writing metrics to influxDB Url: http://influxdb:8086/write?db=jmeter, responseCode: 401, responseBody: {"code":"unauthorized","message":"unauthorized access"}
+2025-11-08 00:29:54,904 ERROR o.a.j.v.b.i.HttpMetricsSender: Error writing metrics to influxDB Url: http://influxdb:8086/write?db=jmeter, responseCode: 401, responseBody: {"code":"unauthorized","message":"unauthorized access"}
+2025-11-08 00:29:59,582 ERROR o.a.j.v.b.i.HttpMetricsSender: Error writing metrics to influxDB Url: http://influxdb:8086/write?db=jmeter, responseCode: 401, responseBody: {"code":"unauthorized","message":"unauthorized access"}
+2025-11-08 00:30:00,000 INFO o.a.j.r.Summariser: summary +  58775 in 00:00:30 = 1959.2/s Avg:    14 Min:     0 Max:   266 Err: 58775 (100.00%) Active: 30 Started: 30 Finished: 0
+2025-11-08 00:30:00,013 INFO o.a.j.r.Summariser: summary = 881160 in 00:07:16 = 2021.1/s Avg:    12 Min:     0 Max:   721 Err: 881160 (100.00%)
+2025-11-08 00:30:04,772 ERROR o.a.j.v.b.i.HttpMetricsSender: Error writing metrics to influxDB Url: http://influxdb:8086/write?db=jmeter, responseCode: 401, responseBody: {"code":"unauthorized","message":"unauthorized access"}
+2025-11-08 00:30:09,530 ERROR o.a.j.v.b.i.HttpMetricsSender: Error writing metrics to influxDB Url: http://influxdb:8086/write?db=jmeter, responseCode: 401, responseBody: {"code":"unauthorized","message":"unauthorized access"}
+2025-11-08 00:30:14,768 ERROR o.a.j.v.b.i.HttpMetricsSender: Error writing metrics to influxDB Url: http://influxdb:8086/write?db=jmeter, responseCode: 401, responseBody: {"code":"unauthorized","message":"unauthorized access"}
+2025-11-08 00:30:19,740 ERROR o.a.j.v.b.i.HttpMetricsSender: Error writing metrics to influxDB Url: http://influxdb:8086/write?db=jmeter, responseCode: 401, responseBody: {"code":"unauthorized","message":"unauthorized access"}
+2025-11-08 00:30:24,833 ERROR o.a.j.v.b.i.HttpMetricsSender: Error writing metrics to influxDB Url: http://influxdb:8086/write?db=jmeter, responseCode: 401, responseBody: {"code":"unauthorized","message":"unauthorized access"}
+2025-11-08 00:30:30,002 INFO o.a.j.r.Summariser: summary +  58094 in 00:00:30 = 1936.5/s Avg:    14 Min:     0 Max:   192 Err: 58094 (100.00%) Active: 30 Started: 30 Finished: 0
+2025-11-08 00:30:30,005 INFO o.a.j.r.Summariser: summary = 939254 in 00:07:46 = 2015.6/s Avg:    13 Min:     0 Max:   721 Err: 939254 (100.00%)
+2025-11-08 00:30:30,232 ERROR o.a.j.v.b.i.HttpMetricsSender: Error writing metrics to influxDB Url: http://influxdb:8086/write?db=jmeter, responseCode: 401, responseBody: {"code":"unauthorized","message":"unauthorized access"}
+2025-11-08 00:30:34,926 ERROR o.a.j.v.b.i.HttpMetricsSender: Error writing metrics to influxDB Url: http://influxdb:8086/write?db=jmeter, responseCode: 401, responseBody: {"code":"unauthorized","message":"unauthorized access"}
+2025-11-08 00:30:39,583 ERROR o.a.j.v.b.i.HttpMetricsSender: Error writing metrics to influxDB Url: http://influxdb:8086/write?db=jmeter, responseCode: 401, responseBody: {"code":"unauthorized","message":"unauthorized access"}
+2025-11-08 00:30:44,104 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: HEAVY-body Thread Group 1-1
+2025-11-08 00:30:44,110 INFO o.a.j.t.JMeterThread: Thread finished: HEAVY-body Thread Group 1-1
+2025-11-08 00:30:44,110 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: HEAVY-body Thread Group 1-12
+2025-11-08 00:30:44,112 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: HEAVY-body Thread Group 1-16
+2025-11-08 00:30:44,112 INFO o.a.j.t.JMeterThread: Thread finished: HEAVY-body Thread Group 1-16
+2025-11-08 00:30:44,113 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: HEAVY-body Thread Group 1-14
+2025-11-08 00:30:44,113 INFO o.a.j.t.JMeterThread: Thread finished: HEAVY-body Thread Group 1-14
+2025-11-08 00:30:44,114 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: HEAVY-body Thread Group 1-20
+2025-11-08 00:30:44,114 INFO o.a.j.t.JMeterThread: Thread finished: HEAVY-body Thread Group 1-20
+2025-11-08 00:30:44,116 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: HEAVY-body Thread Group 1-24
+2025-11-08 00:30:44,117 INFO o.a.j.t.JMeterThread: Thread finished: HEAVY-body Thread Group 1-24
+2025-11-08 00:30:44,117 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: HEAVY-body Thread Group 1-13
+2025-11-08 00:30:44,119 INFO o.a.j.t.JMeterThread: Thread finished: HEAVY-body Thread Group 1-13
+2025-11-08 00:30:44,110 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: HEAVY-body Thread Group 1-5
+2025-11-08 00:30:44,117 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: HEAVY-body Thread Group 1-7
+2025-11-08 00:30:44,117 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: HEAVY-body Thread Group 1-21
+2025-11-08 00:30:44,120 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: HEAVY-body Thread Group 1-22
+2025-11-08 00:30:44,115 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: HEAVY-body Thread Group 1-18
+2025-11-08 00:30:44,115 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: HEAVY-body Thread Group 1-6
+2025-11-08 00:30:44,115 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: HEAVY-body Thread Group 1-9
+2025-11-08 00:30:44,114 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: HEAVY-body Thread Group 1-10
+2025-11-08 00:30:44,120 INFO o.a.j.t.JMeterThread: Thread finished: HEAVY-body Thread Group 1-9
+2025-11-08 00:30:44,113 INFO o.a.j.t.JMeterThread: Thread finished: HEAVY-body Thread Group 1-12
+2025-11-08 00:30:44,113 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: HEAVY-body Thread Group 1-4
+2025-11-08 00:30:44,112 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: HEAVY-body Thread Group 1-11
+2025-11-08 00:30:44,110 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: HEAVY-body Thread Group 1-8
+2025-11-08 00:30:44,109 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: HEAVY-body Thread Group 1-3
+2025-11-08 00:30:44,106 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: HEAVY-body Thread Group 1-2
+2025-11-08 00:30:44,121 INFO o.a.j.t.JMeterThread: Thread finished: HEAVY-body Thread Group 1-8
+2025-11-08 00:30:44,121 INFO o.a.j.t.JMeterThread: Thread finished: HEAVY-body Thread Group 1-11
+2025-11-08 00:30:44,121 INFO o.a.j.t.JMeterThread: Thread finished: HEAVY-body Thread Group 1-4
+2025-11-08 00:30:44,120 INFO o.a.j.t.JMeterThread: Thread finished: HEAVY-body Thread Group 1-10
+2025-11-08 00:30:44,120 INFO o.a.j.t.JMeterThread: Thread finished: HEAVY-body Thread Group 1-6
+2025-11-08 00:30:44,120 INFO o.a.j.t.JMeterThread: Thread finished: HEAVY-body Thread Group 1-18
+2025-11-08 00:30:44,120 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: HEAVY-body Thread Group 1-17
+2025-11-08 00:30:44,120 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: HEAVY-body Thread Group 1-27
+2025-11-08 00:30:44,120 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: HEAVY-body Thread Group 1-26
+2025-11-08 00:30:44,120 INFO o.a.j.t.JMeterThread: Thread finished: HEAVY-body Thread Group 1-22
+2025-11-08 00:30:44,120 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: HEAVY-body Thread Group 1-30
+2025-11-08 00:30:44,120 INFO o.a.j.t.JMeterThread: Thread finished: HEAVY-body Thread Group 1-21
+2025-11-08 00:30:44,120 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: HEAVY-body Thread Group 1-29
+2025-11-08 00:30:44,119 INFO o.a.j.t.JMeterThread: Thread finished: HEAVY-body Thread Group 1-7
+2025-11-08 00:30:44,119 INFO o.a.j.t.JMeterThread: Thread finished: HEAVY-body Thread Group 1-5
+2025-11-08 00:30:44,117 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: HEAVY-body Thread Group 1-15
+2025-11-08 00:30:44,119 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: HEAVY-body Thread Group 1-25
+2025-11-08 00:30:44,119 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: HEAVY-body Thread Group 1-19
+2025-11-08 00:30:44,119 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: HEAVY-body Thread Group 1-28
+2025-11-08 00:30:44,118 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: HEAVY-body Thread Group 1-23
+2025-11-08 00:30:44,125 INFO o.a.j.t.JMeterThread: Thread finished: HEAVY-body Thread Group 1-19
+2025-11-08 00:30:44,124 INFO o.a.j.t.JMeterThread: Thread finished: HEAVY-body Thread Group 1-25
+2025-11-08 00:30:44,124 INFO o.a.j.t.JMeterThread: Thread finished: HEAVY-body Thread Group 1-15
+2025-11-08 00:30:44,124 INFO o.a.j.t.JMeterThread: Thread finished: HEAVY-body Thread Group 1-29
+2025-11-08 00:30:44,123 INFO o.a.j.t.JMeterThread: Thread finished: HEAVY-body Thread Group 1-30
+2025-11-08 00:30:44,123 INFO o.a.j.t.JMeterThread: Thread finished: HEAVY-body Thread Group 1-26
+2025-11-08 00:30:44,123 INFO o.a.j.t.JMeterThread: Thread finished: HEAVY-body Thread Group 1-27
+2025-11-08 00:30:44,123 INFO o.a.j.t.JMeterThread: Thread finished: HEAVY-body Thread Group 1-17
+2025-11-08 00:30:44,122 INFO o.a.j.t.JMeterThread: Thread finished: HEAVY-body Thread Group 1-2
+2025-11-08 00:30:44,121 INFO o.a.j.t.JMeterThread: Thread finished: HEAVY-body Thread Group 1-3
+2025-11-08 00:30:44,125 INFO o.a.j.t.JMeterThread: Thread finished: HEAVY-body Thread Group 1-23
+2025-11-08 00:30:44,125 INFO o.a.j.t.JMeterThread: Thread finished: HEAVY-body Thread Group 1-28
+2025-11-08 00:30:44,127 INFO o.a.j.e.StandardJMeterEngine: Notifying test listeners of end of test
+2025-11-08 00:30:44,127 INFO o.a.j.s.FileServer: Close: /jmeter-data/items_ids.csv
+2025-11-08 00:30:44,211 INFO o.a.j.v.b.BackendListener: Worker ended
+2025-11-08 00:30:44,220 INFO o.a.j.v.b.i.InfluxdbBackendListenerClient: Sending last metrics to InfluxDB
+2025-11-08 00:30:44,221 ERROR o.a.j.v.b.i.HttpMetricsSender: Error writing metrics to influxDB Url: http://influxdb:8086/write?db=jmeter, responseCode: 401, responseBody: {"code":"unauthorized","message":"unauthorized access"}
+2025-11-08 00:30:44,326 INFO o.a.j.v.b.i.HttpMetricsSender: Destroying 
+2025-11-08 00:30:44,329 ERROR o.a.j.v.b.i.HttpMetricsSender: Error writing metrics to influxDB Url: http://influxdb:8086/write?db=jmeter, responseCode: 401, responseBody: {"code":"unauthorized","message":"unauthorized access"}
+2025-11-08 00:30:44,330 INFO o.a.j.r.Summariser: summary +  27293 in 00:00:14 = 1904.9/s Avg:    14 Min:     0 Max:   161 Err: 27293 (100.00%) Active: 0 Started: 30 Finished: 30
+2025-11-08 00:30:44,330 INFO o.a.j.r.Summariser: summary = 966547 in 00:08:00 = 2012.3/s Avg:    13 Min:     0 Max:   721 Err: 966547 (100.00%)

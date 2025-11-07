@@ -1,0 +1,23 @@
+global:
+  scrape_interval: 5s
+
+scrape_configs:
+  - job_name: 'service-a'
+    metrics_path: '/prometheus'
+    static_configs:
+      - targets: ['service-a:8081']
+
+  - job_name: 'service-c'
+    metrics_path: '/actuator/prometheus'
+    static_configs:
+      - targets: ['service-c:8082']
+
+  - job_name: 'service-d'
+    metrics_path: '/actuator/prometheus'
+    static_configs:
+      - targets: ['service-d:8083']
+
+  # If using a postgres exporter container, enable this target and match the port
+  # - job_name: 'postgres'
+  #   static_configs:
+  #     - targets: ['postgres:9187']
