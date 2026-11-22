@@ -1,25 +1,29 @@
-version: '3.8'
 services:
   postgres:
     image: postgres:14
     restart: unless-stopped
     environment:
-      POSTGRES_USER: perf
-      POSTGRES_PASSWORD: perf
-      POSTGRES_DB: perf
+      POSTGRES_USER: ${POSTGRES_USER:-perf}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-perf}
+      POSTGRES_DB: ${POSTGRES_DB:-perf}
     ports:
-      - "5432:5432"
+      - "127.0.0.1:5432:5432"
     volumes:
       - postgres-data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-perf}"]
+      interval: 5s
+      retries: 10
 
   service-a:
     build: ./service-a
     depends_on:
-      - postgres
-    environment:
-      SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/perf
-      SPRING_DATASOURCE_USERNAME: perf
-      SPRING_DATASOURCE_PASSWORD: perf
+      postgres:
+        condition: service_healthy
+    environment: &datasource
+      SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/${POSTGRES_DB:-perf}
+      SPRING_DATASOURCE_USERNAME: ${POSTGRES_USER:-perf}
+      SPRING_DATASOURCE_PASSWORD: ${POSTGRES_PASSWORD:-perf}
     ports:
       - "8081:8081"
     restart: unless-stopped
@@ -27,11 +31,9 @@ services:
   service-c:
     build: ./service-c
     depends_on:
-      - postgres
-    environment:
-      SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/perf
-      SPRING_DATASOURCE_USERNAME: perf
-      SPRING_DATASOURCE_PASSWORD: perf
+      postgres:
+        condition: service_healthy
+    environment: *datasource
     ports:
       - "8082:8082"
     restart: unless-stopped
@@ -39,34 +41,32 @@ services:
   service-d:
     build: ./service-d
     depends_on:
-      - postgres
-    environment:
-      SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/perf
-      SPRING_DATASOURCE_USERNAME: perf
-      SPRING_DATASOURCE_PASSWORD: perf
+      postgres:
+        condition: service_healthy
+    environment: *datasource
     ports:
       - "8083:8083"
     restart: unless-stopped
 
   prometheus:
-    image: prom/prometheus:latest
+    image: prom/prometheus:v2.54.1
     volumes:
       - ./monitoring/prometheus.yml:/etc/prometheus/prometheus.yml:ro
     command:
       - "--config.file=/etc/prometheus/prometheus.yml"
     ports:
-      - "9090:9090"
+      - "127.0.0.1:9090:9090"
     depends_on:
       - service-a
       - service-c
       - service-d
 
   grafana:
-    image: grafana/grafana:latest
+    image: grafana/grafana:11.2.0
     ports:
-      - "3000:3000"
+      - "127.0.0.1:3000:3000"
     environment:
-      GF_SECURITY_ADMIN_PASSWORD: admin
+      GF_SECURITY_ADMIN_PASSWORD: ${GRAFANA_ADMIN_PASSWORD:-admin}
     depends_on:
       - prometheus
       - influxdb
@@ -74,15 +74,16 @@ services:
       - grafana-data:/var/lib/grafana
 
   influxdb:
-    image: influxdb:2
+    image: influxdb:2.7
     ports:
-      - "8086:8086"
+      - "127.0.0.1:8086:8086"
     environment:
       DOCKER_INFLUXDB_INIT_MODE: setup
-      DOCKER_INFLUXDB_INIT_USERNAME: admin
-      DOCKER_INFLUXDB_INIT_PASSWORD: adminadmin
-      DOCKER_INFLUXDB_INIT_ORG: perf
-      DOCKER_INFLUXDB_INIT_BUCKET: jmeter
+      DOCKER_INFLUXDB_INIT_USERNAME: ${INFLUXDB_ADMIN_USER:-admin}
+      DOCKER_INFLUXDB_INIT_PASSWORD: ${INFLUXDB_ADMIN_PASSWORD:-adminadmin}
+      DOCKER_INFLUXDB_INIT_ORG: ${INFLUXDB_ORG:-perf}
+      DOCKER_INFLUXDB_INIT_BUCKET: ${INFLUXDB_BUCKET:-jmeter}
+      DOCKER_INFLUXDB_INIT_ADMIN_TOKEN: ${INFLUXDB_TOKEN:-local-dev-token}
     volumes:
       - influxdb-data:/var/lib/influxdb2
 

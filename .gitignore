@@ -1,0 +1,25 @@
+# Build output
+target/
+*.class
+
+# IDE
+.idea/
+.vscode/
+*.iml
+
+# Environment
+.env
+
+# JMeter run artefacts
+*.jtl
+jmeter.log
+jmeter/results/
+jmeter/report/
+
+# Python
+__pycache__/
+.venv/
+
+# OS
+.DS_Store
+Thumbs.db
